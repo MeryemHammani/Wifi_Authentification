@@ -11,7 +11,7 @@ def generate_code(length):
     return code
 
 def send_email_structure(toaddr,subject,body,body_type):
-        fromaddr = 'hammani.meryem29@gmail.com'
+        fromaddr = 'Sender mail'
         msg = MIMEMultipart()
         msg['From'] = fromaddr
         msg['To'] = toaddr
@@ -21,7 +21,7 @@ def send_email_structure(toaddr,subject,body,body_type):
 
         server = smtplib.SMTP('smtp.gmail.com', 25)
         server.starttls()
-        server.login(fromaddr, 'xhdamwegwsuigddl')
+        server.login(fromaddr, 'sender code')
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
         server.quit()
